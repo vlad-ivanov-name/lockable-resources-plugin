@@ -594,6 +594,7 @@ public class LockableResourcesManager extends GlobalConfiguration {
       if (existent == null) {
         LockableResource resource = new LockableResource(name);
         resource.setLabels(label);
+        resource.setEphemeral(true);
         getResources().add(resource);
         save();
         return true;
